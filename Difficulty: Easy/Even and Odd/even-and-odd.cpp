@@ -6,15 +6,15 @@ class Solution {
         // code here
        int ei = 0, oi = 1;
        while (ei < n && oi < n) {
-           if (ei < n && arr[ei] % 2 == 0) {
+           while (ei < n && arr[ei] % 2 == 0) {
                ei += 2;
            }
            
-           if (oi < n && arr[oi] % 2 == 1) {
+           while (oi < n && arr[oi] % 2 == 1) {
                oi += 2;
            }
            
-           if (ei < n && oi < n) {
+           if (ei < n) {
                swap(arr[ei], arr[oi]);
            }
        }
