@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/number-of-pairs3422/1">Number of pairs</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given two arrays&nbsp;<strong>arr1[]</strong>&nbsp;and&nbsp;<strong>arr2[]</strong>. Find number of pairs such that&nbsp;<strong>x<sup>y</sup>&nbsp;&gt; y<sup>x</sup></strong>&nbsp;where&nbsp;<strong>x</strong>&nbsp;is an element from&nbsp;<strong>arr1[]</strong>&nbsp;and&nbsp;<strong>y</strong>&nbsp;is an element from&nbsp;<strong>arr2[]</strong>. R</span><span style="font-size: 18px;">eturns an integer denoting the number of pairs that are true to the given condition.&nbsp;</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr1[] = [2, 1, 6] , arr2 = [1, 5]
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> There are total 3 pairs where pow(x, y) is greater than pow(y, x). The pairs are (2, 1), (2, 5) and (6, 1).</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr1[] = [10, 19, 18] , arr2[] = [11, 15, 9]
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> There are total 2 pairs where pow(x, y) is greater than pow(y, x). The pairs are (10, 11) and (10, 15).</span></pre>
+<p><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong>&nbsp;O(n*logn + m*logm)<br><strong>Expected Auxiliary Space:</strong>&nbsp;O(1)</span></p>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ arr1.size, arr2.size ≤ 10<sup>5</sup><br>1 ≤ arr1[i], arr2[i] ≤ 10<sup>3</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>FactSet</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Sorting</code>&nbsp;<code>Data Structures</code>&nbsp;<code>Algorithms</code>&nbsp;
