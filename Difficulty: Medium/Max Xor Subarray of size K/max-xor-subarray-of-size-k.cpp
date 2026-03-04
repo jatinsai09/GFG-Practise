@@ -9,8 +9,8 @@ class Solution {
         
         int res = cur;
         for(int i = k; i < n; i++){
-            cur ^= arr[i - k];
-            cur ^= arr[i];
+            cur ^= (arr[i - k] ^ arr[i]);
+            
             if(cur > res){
                 res = cur;
             }
