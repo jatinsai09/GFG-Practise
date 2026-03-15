@@ -22,11 +22,8 @@ class Solution {
     
         q.push({root, 0});
         while (!q.empty()) {
-            auto it = q.front();
+            auto [cur, hd] = q.front();
             q.pop();
-    
-            Node* cur = it.first;
-            int hd = it.second;
     
             mp[hd].push_back(cur->data);
     
@@ -39,8 +36,8 @@ class Solution {
         }
 
         vector<vector<int>> res;
-        for (auto &x : mp) {
-            res.push_back(x.second);
+        for (auto &[x, v]: mp) {
+            res.push_back(v);
         }
     
         return res;
