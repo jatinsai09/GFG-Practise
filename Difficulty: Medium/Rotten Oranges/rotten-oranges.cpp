@@ -2,7 +2,7 @@ class Solution {
   public:
     int orangesRot(vector<vector<int>>& grid) {
         // code here
-         vector<int> dir = {-1, 0, 1, 0, -1};
+        vector<int> dir = {-1, 0, 1, 0, -1};
 
         int r = grid.size(), c = grid[0].size();
         int vis[r][c];
@@ -24,7 +24,7 @@ class Solution {
             }
         }
 
-        int maxt = 0, c1 = 0;
+        int maxt = 0;
         while (!q.empty()) {
             pair<pair<int, int>,int> p = q.front();
             q.pop(); 
@@ -39,11 +39,11 @@ class Solution {
                 if (dr >= 0 && dr < r && dc >= 0 && dc < c && vis[dr][dc] == 1) {
                     vis[dr][dc] = 2;
                     q.push({{dr, dc}, t + 1});
-                    c1++;
+                    fresh--;
                 }
             }
         }
         
-        return (fresh == c1 ? maxt : -1);
+        return (fresh == 0 ? maxt : -1);
     }
 };
