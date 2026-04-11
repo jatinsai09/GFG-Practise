@@ -2,14 +2,14 @@ class Solution {
   public:
     int countIncreasing(vector<int>& arr) {
         // code here.
+        int n = arr.size(), res = 0, c = 1;
         
-        int n = arr.size(), res = 0;
-        
-        for (int l = 0, r = 1; r < n; r++) {
-            if (arr[r] <= arr[r - 1]) {
-                l = r;
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > arr[i - 1]) {
+                c++;
+                res += (c - 1);
             } else {
-                res += r - l;
+                c = 1;
             }
         }
         
