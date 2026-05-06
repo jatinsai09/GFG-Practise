@@ -16,19 +16,15 @@ struct Node
 class Solution {
   public:
     bool same(Node* a, Node* b) {
-        if (a == NULL && b == NULL) {
-            return true;
-        }
-        
         if (a == NULL || b == NULL) {
-            return false;
+            return a == b;
         }
         
         if (a->data != b->data) {
             return false;
         }
         
-        return (same(a->left, b->left) && same(a->right, b->right));
+        return same(a->left, b->left) && same(a->right, b->right);
     }
     
     // Function to check if S is a subtree of tree T.
@@ -45,6 +41,6 @@ class Solution {
             return 1;
         }
         
-        return (isSubTree(T->left, S) || isSubTree(T->right, S));
+        return isSubTree(T->left, S) || isSubTree(T->right, S);
     }
 };
