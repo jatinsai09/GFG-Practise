@@ -5,7 +5,6 @@ class Solution {
     long long int optimalKeys(int n) {
         // code here
         vector<long long> dp(n + 1, 0);
-
         for (int i = 1; i <= n; i++) {
             dp[i] = i;
         }
