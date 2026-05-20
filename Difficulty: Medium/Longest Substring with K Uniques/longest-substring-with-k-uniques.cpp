@@ -5,19 +5,19 @@ class Solution {
         int n = s.size();
         vector<int> cnt(26, 0);
         
-        int dist = 0, res = -1;
+        int unq = 0, res = -1;
         for(int l = 0, r = 0; r < n; r++) {
             if(++cnt[s[r] - 'a'] == 1) {
-                dist++;
+                unq++;
             }
             
-            while (dist > k) {
+            if (unq > k) {
                 if(--cnt[s[l++] - 'a'] == 0) {
-                    dist--;
+                    unq--;
                 }
             }
             
-            if(dist == k) {
+            if(unq == k) {
                 res = max(res, r - l + 1);
             }
         }
