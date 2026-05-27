@@ -16,10 +16,9 @@ class Solution {
             
             if (op < n / 2) {
                 s.push_back('(');
-                dfs(op+ 1, cl);
+                dfs(op + 1, cl);
                 s.pop_back();
             }
-        
             if (cl < op) {
                 s.push_back(')');
                 dfs(op, cl + 1);
