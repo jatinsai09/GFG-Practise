@@ -1,27 +1,25 @@
 class Solution {
   public:
-    void mergeArrays(vector<int>& a, vector<int>& b) {
+    void mergeArrays(vector<int>& nums1, vector<int>& nums2) {
         // code here
-        int n = a.size(), m = b.size();
-        int gap = (n + m + 1) / 2;
-        
-        while (gap > 0) {
+        int m = nums1.size(), n = nums2.size(); 
+        int t = m + n, gap = (t + 1) / 2;
+
+        while (gap) {
             int i = 0, j = gap;
-            
-            while (j < n + m) {
-                if (j < n && a[i] > a[j]) {
-                    swap(a[i], a[j]);
+
+            while (j < t) {
+                if (j < m && nums1[i] > nums1[j]) {
+                    swap(nums1[i], nums1[j]);
+                } else if (i < m && j >= m && nums1[i] > nums2[j - m]) {
+                    swap(nums1[i], nums2[j - m]);
+                } else if (i >= m && nums2[i - m] > nums2[j - m]) {
+                    swap(nums2[i - m], nums2[j - m]);
                 }
-                else if (i < n && j >= n && a[i] > b[j - n]) {
-                    swap(a[i], b[j - n]);
-                }
-                else if (i >= n && b[i - n] > b[j - n]) {
-                    swap(b[i - n], b[j - n]);
-                }
-                
                 i++;
                 j++;
             }
+
             if (gap == 1) {
                 break;
             }
