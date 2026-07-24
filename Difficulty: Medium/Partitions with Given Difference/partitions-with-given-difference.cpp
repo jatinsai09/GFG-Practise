@@ -7,9 +7,9 @@ class Solution {
             s += i;
         }
 
-        if ((s + d) % 2) return 0;
+        if (abs(d) > s || (s - d) % 2) return 0;
         
-        int t = (s + d) / 2;
+        int t = (s - d) / 2;
         vector<int> dp(t + 1, 0);
         dp[0] = 1;
 
