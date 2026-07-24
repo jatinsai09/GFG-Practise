@@ -12,9 +12,7 @@ class Solution {
             }
             
             if (unq > k) {
-                if(--cnt[s[l++] - 'a'] == 0) {
-                    unq--;
-                }
+                unq -= (--cnt[s[l++] - 'a'] == 0);
             }
             
             if(unq == k) {
