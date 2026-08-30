@@ -17,16 +17,16 @@ class Solution {
         while (l <= r) {
             m = l + (r - l) / 2;
             
-            ll s = 0, g = 1;
-            for (auto &i: arr) {
+            ll s = 0, got = 1;
+            for (const auto &i: arr) {
                 s += i;
                 if (s > m) {
-                    g++;
+                    got++;
                     s = i;
                 }
             }
             
-            if (g > k) {
+            if (got > k) {
                 l = m + 1;
             } else {
                 r = m - 1;
